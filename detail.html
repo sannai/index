@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<title></title>
+		<script type="text/javascript">
+			var fs=document.documentElement.clientWidth/750*100;
+			document.querySelector('html').style.fontSize=fs+'px';
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="index.html ">
+				<i class="iconfont icon-fanhui"> </i>
+			</a> 
+			<span>赚钱计划8号1期</span>
+			<i class="iconfont icon-caidan" id="menu"> </i>
+		</header>
+		<section class="data">
+			<p class="data1"> <strong>9.2%+0.5%</strong></p>
+			<p class="data2"> <em>9.7%(.........0.5%)</em></p>
+		</section>
+		<section class="support">
+			<div class="keys">
+				<span>1000元起投</span>
+				<span>期限180天</span>
+			</div>
+			<div>
+				<ul>
+					<li> <i class="iconfont icon-xinshouzhiyin"></i>省级律所法律支持</li>
+					<li><i class="iconfont icon-xinshouzhiyin"></i>浙大友创战略入股</li>
+					<li><i class="iconfont icon-xinshouzhiyin"></i>省级律所法律支持</li>
+					<li><i class="iconfont icon-xinshouzhiyin"></i>浙大友创战略入股</li>
+				</ul>
+			</div>
+		</section>
+		<section class="proccess">
+			
+			<div class="pro-wrap" data-proccess="100">
+				<div class="pro-front"></div>
+				<div class="pro-block">0%</div>
+			</div>
+			
+			<p class="pro-info">
+				<span>已投资<em>37</em>人</span>
+				<span>剩余可投<em>664444</em>元</span>
+			</p>
+			
+		</section>
+		<section class="footerlink">
+			<p><a href="">查看项目详情</a></p>
+		</section>
+		<footer >
+			<a href="" class="earnings">收益估算</a>
+			<a href="" class="investment">立即投资</a>
+		</footer>
+		<script src="js/zepto/zepto.js"></script>
+		<script src="js/zepto/event.js"></script>
+		<script src="js/zepto/touch.js"></script>
+		<script type="text/javascript">
+			//处理兼计时器容性问题
+			window.requestAnimFrame = (function(){
+				  return  window.requestAnimationFrame       ||
+				          window.webkitRequestAnimationFrame ||
+				          window.mozRequestAnimationFrame    ||
+				          function( callback ){
+				            window.setTimeout(callback, 1000 / 60);
+				          };
+			})();
+			
+			window.cancelrequestAnimFrame = (function(){
+				  return  window.cancelAnimationFrame   ||
+				          window.webkitCancelAnimationFrame ||
+				          window.mozCancelAnimationFrame    ||
+				          window.clearTimeout;
+				          
+			})();
+			
+		$(function(){
+			var value=$('.pro-wrap').attr('data-proccess');//获取自定义属性
+			var currentValue=0;
+			var timerId;//定义时间
+			//除30是因为动画每秒执行60次  现在用0.5s执行就是30
+			var step = value / 30;
+			
+			//1.红色的前景的宽度：从0开始
+			var totalWidth=$('.pro-wrap').width();//获取元素宽度
+			//元素宽度*自定义属性/100；
+			var frontWidth=totalWidth*value/100;
+			$('.pro-front').css('width',frontWidth);
+			
+			//2.left从0到 红色的前景的宽度--减去自己宽度/2；
+			$(".pro-block").css("left", frontWidth - $(".pro-block").width()/2  );
+			
+			//3.数字从0不断加到value
+			
+			function addNumber(){
+				//这里代表百分百步长
+				currentValue=currentValue+step;
+				currentValue = +currentValue.toFixed(2);//保留两位有效数字
+				//Math.max();
+					currentValue = currentValue > value ?  value : currentValue;
+				//修改百分百的值
+				$('.pro-block').html(currentValue+'%');
+				timerId=requestAnimationFrame(function(){
+					addNumber();//每秒执行多少次
+				});
+				//判断是否满百分百
+				if(currentValue>=value){
+					currentValue=value;
+					//停止计时器
+					cancelAnimationFrame(timerId)
+				}
+			}
+			addNumber();
+		})
+			
+		</script>
+	</body>
+</html>

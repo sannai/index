@@ -1,0 +1,413 @@
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.vc {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lh28 {
+  line-height: 28px;
+}
+.c3 {
+  color: #333;
+}
+.c9 {
+  color: #999;
+}
+.cf4 {
+  color: #f40;
+}
+.c1 {
+  color: #9a745f;
+}
+.fs14 {
+  font-size: 14px;
+}
+.fs16 {
+  font-size: 16px;
+}
+.lh2 {
+  line-height: 2;
+}
+.lh16 {
+  line-height: 16px !important;
+}
+.mg20 {
+  margin: 20px 0;
+}
+.underline:after {
+  content: "";
+  height: 2px;
+  width: 40px;
+  background-color: #f40;
+  bottom: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+div,
+input,
+header,
+section,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+fieldset,
+img {
+  border: none;
+}
+img {
+  display: block;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var,
+h1,
+h2,
+h3,
+h4 {
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体";
+}
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  background: none;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+  color: #333;
+  font: 12px/20px "微软雅黑", "宋体", "Arial Narrow", HELVETICA;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+html {
+  font-size: 100px;
+}
+body {
+  background-color: #f9f9f9;
+}
+header {
+  background: #fa3432;
+  height: 0.94rem;
+  font-size: 30;
+  font-size: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  color: #fff;
+}
+header div {
+  padding-left: 0.18rem;
+  padding-right: 0.32rem;
+}
+header .logo a {
+  display: flex;
+  align-items: center;
+}
+header .logo a img {
+  height: 0.4rem;
+  width: 37;
+  width: 0.37rem;
+}
+header .logo a h1 {
+  padding-left: 0.1rem;
+  font-size: 30;
+  font-size: 0.3rem;
+}
+.curren {
+  height: 0.86rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.curren a {
+  font-size: 24;
+  font-size: 0.24rem;
+  color: #4b4a4a;
+}
+.curren .current {
+  color: #ff3636 ;
+}
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe .swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe .swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.swipe img {
+  width: 100%;
+}
+.swipe .indirector {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swipe .indirector span {
+  display: inline-block;
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.swipe .indirector .on {
+  background-color: red;
+}
+.usernav {
+  height: 2rem;
+  padding-top: 0.34rem;
+  padding-bottom: 0.34rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.usernav a {
+  text-align: center;
+}
+.usernav a i {
+  align-items: center;
+  line-height: 0.9rem;
+  display: inline-block;
+  width: 90;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 12%;
+  font-size: 44;
+  font-size: 0.44rem;
+  color: #fff;
+}
+.usernav a .icon-suo {
+  background: #4099E9 ;
+}
+.usernav a .icon-wode {
+  background: #FB6361 ;
+}
+.usernav a .icon-zhiyin {
+  background: #40C8B0 ;
+}
+.usernav a .icon-wenhao {
+  background: #FFAE28 ;
+}
+section .title {
+  height: 0.95rem;
+  font-size: 30;
+  font-size: 0.3rem;
+  padding-left: 0.36rem;
+  padding-right: 0.38rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title h3 {
+  line-height: 0.4rem;
+  display: block;
+  height: 0.4rem;
+  padding-left: 0.5rem;
+  background: url(../img/home_ico_09.png) no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.hotproducts .itemlist {
+  margin-left: 0.23rem;
+  margin-right: 0.23rem;
+  margin-bottom: 0.25rem;
+  background: #F9F9F9;
+}
+.hotproducts .itemlist .item {
+  background: #FFF;
+  margin-bottom: 0.25rem;
+}
+.hotproducts .itemlist .item .item-title {
+  padding-left: 0.25rem;
+  padding-top: 0.25rem;
+  padding-right: 0.2rem;
+  font-size: 28;
+  font-size: 0.28rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hotproducts .itemlist .item .item-title h4 {
+  height: 0.28rem;
+  line-height: 0.28rem;
+}
+.hotproducts .itemlist .item .item-title span {
+  color: #fff;
+  height: 0.3rem;
+  width: 130;
+  width: 1.3rem;
+  text-align: center;
+  display: flex;
+  line-height: 0.3rem;
+  justify-content: space-between;
+}
+.hotproducts .itemlist .item .item-title span .cash {
+  width: 85;
+  width: 0.85rem;
+  height: 0.3rem;
+  background: #FFAE28;
+  display: inline-block;
+}
+.hotproducts .itemlist .item .item-title span .icon-vip {
+  width: 33;
+  width: 0.33rem;
+  height: 0.3rem;
+  background: #FFAE28;
+  display: inline-block;
+}
+.hotproducts .itemlist .item .item-title span i {
+  border-radius: 2%;
+}
+.hotproducts .itemlist .data {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.43rem;
+  align-items: center;
+  font-size: 20;
+  font-size: 0.2rem;
+}
+.hotproducts .itemlist .data .data1 {
+  font-size: 38;
+  font-size: 0.38rem;
+  color: #FB4034;
+  padding-left: 0.43rem;
+}
+.hotproducts .itemlist .data .data1 em {
+  font-size: 24;
+  font-size: 0.24rem;
+  color: #ff7900;
+}
+.hotproducts .itemlist .data .data3 img {
+  margin-top: 0.28rem;
+  width: 136;
+  width: 1.36rem;
+  height: 1.36rem;
+}
+.news .itemlist .item {
+  background: #fff;
+  padding-left: 0.23rem;
+  padding-top: 0.35rem;
+  padding-right: 0.23rem;
+  padding-bottom: 0.35rem;
+}
+.news .itemlist .item a {
+  display: flex;
+}
+.news .itemlist .item a img {
+  flex: 0 0 auto;
+  width: 110;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 10%;
+  margin-right: 0.23rem;
+}
+.news .itemlist .item a div {
+  flex: 1 1 auto;
+  align-items: center;
+  font-size: 20;
+  font-size: 0.2rem;
+  line-height: 0.5rem;
+  margin-right: 0.2rem;
+}
+.news .itemlist .item a div p {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  margin-top: 0.2rem;
+  text-align: center;
+  line-height: 0.3rem;
+  background: #fff;
+}

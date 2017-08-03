@@ -1,0 +1,166 @@
+//主页样式
+@import "zcm.less";
+header{
+    background: #fa3432;
+    .h(94);
+    .fs(30);
+     a{color: #fff;}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{.pl(18); .pr(32);}
+    .logo{
+        a{
+            display: flex;align-items: center;
+            img{.h(40);.w(37);}
+            h1{.pl(10);.fs(30);}
+        }
+    }
+}
+
+//首页
+.curren{
+    .h(86);
+    a{.fs(24);color: #4b4a4a;}
+    background: #fff;
+    display: flex;justify-content: space-around;
+    align-items: center;
+    .current{color:#ff3636 ;}
+}
+
+//轮播图
+.swipe{
+    overflow: hidden;visibility: hidden;position: relative;
+    .swipe-wrap{overflow: hidden;position: relative;}
+    .swipe-wrap>div{ float: left;width: 100%;position: relative;}
+    img{width: 100%;}
+    
+    .indirector{
+        position: absolute;
+        bottom:20px;
+        left:50%;transform: translateX(-50%);
+    }
+    .indirector span{
+        display: inline-block;margin: 3px;
+        width: 10px;height: 10px;border-radius: 50%;
+        background-color: #fff;
+    }
+    .indirector .on{
+        background-color: red;
+    }
+}
+
+//安全保障
+.usernav{
+    .h(200);
+    .pt(34);
+    .pb(34);
+    display: flex;align-items: center;
+    justify-content: space-around;
+    a{
+        text-align: center;
+        i{
+            align-items: center;.lh(90);
+            display: inline-block;.w(90);.h(90);
+            border-radius: 12%;.fs(44);color: #fff;
+        }
+       .icon-suo{background:#4099E9 ;} 
+       .icon-wode{background:#FB6361 ;} 
+       .icon-zhiyin{background:#40C8B0 ;} 
+       .icon-wenhao{background:#FFAE28 ;} 
+    }
+}
+
+//产品介绍
+section{
+    .title{
+        .h(95);.fs(30);
+        .pl(36);.pr(38);
+        display: flex;align-items: center;
+        justify-content: space-between;
+        h3{
+            .lh(40);
+            display: block;.h(40);
+            .pl(50);
+            background: url(../img/home_ico_09.png)no-repeat; 
+            .bs(40,40);
+        }
+    }
+}
+.hotproducts{
+    .itemlist{
+            .ml(23);.mr(23);.mb(25);
+            background: #F9F9F9;
+        .item{
+             background: #FFF;
+            .mb(25); 
+            .item-title{
+                .pl(25);.pt(25);.pr(20);.fs(28);
+                display:flex;align-items: center;
+                justify-content: space-between;
+                h4{.h(28);.lh(28);}
+                span{
+                    color: #fff;.h(30);.w(130);
+                    text-align: center;
+                    display: flex;.lh(30);
+                    justify-content: space-between;
+                    .cash{
+                        .w(85);.h(30);background: #FFAE28;
+                        display: inline-block;
+                    }
+                    .icon-vip{
+                        .w(33);.h(30);background: #FFAE28;
+                        display:inline-block;
+                    }
+                    i{border-radius: 2%;}
+                }
+            }
+        }
+        .data{
+            display: flex;justify-content: space-between;
+            .pl(43);align-items: center;.fs(20);
+            .data1{
+                .fs(38);color: #FB4034;.pl(43);
+                em{.fs(24);color: #ff7900;}
+            }
+            .data2{
+                
+            }
+            .data3{
+                img{.mt(28);.w(136);.h(136);}
+            }
+        }
+    }
+}
+
+//企业动态
+.news{
+    .itemlist{
+        .item{
+            background: #fff;.pl(23);.pt(35);.pr(23);.pb(35);
+            a{  display: flex;
+                img{
+                    flex: 0 0 auto;
+                    .w(110);.h(110);border-radius: 10%;
+                    .mr(23);
+                }
+                div{
+                    flex: 1 1 auto;align-items: center;
+                    .fs(20);.lh(50);.mr(20);
+                    p{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//版权 
+footer{
+    .mt(20);
+   text-align: center;.lh(30);
+   background: #fff;
+}
+

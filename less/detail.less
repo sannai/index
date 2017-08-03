@@ -1,0 +1,163 @@
+@import "zcm.less";
+body{
+    background-color: #fff;
+}
+header{
+    .h(92);background-color: #fa3432;.fs(28);
+    color: #fff;.pl(23);.pr(23);
+    .flex_b();
+    a{
+        color: #fff;
+        .icon-fanhui{.fs(28);}
+    }
+   
+}
+
+.data{
+    color:#fff; 
+    .h(222);
+    .pt(50);
+    .tc();
+    .lh(60);
+     background:#ff3c01;
+     background: linear-gradient(to bottom ,#ff3c01, #d80607 );
+     .data1{.fs(68);.mb(42);}
+     .data2{.fs(30);}
+}
+
+.support{
+    .keys{
+        .h(79);.fs(30);color: #777;
+        .flex_a();
+        border-bottom: 2px solid #f1f0f0;
+        span{
+            width: 50%;.tc;
+            &:first-child{border-right:1px solid #ddd;}
+        }
+    }
+    
+    ul{
+        .w(640);margin: 0 auto;
+        .h(203);background:url(../img/detail_icon_bg.png) no-repeat;
+        background-size: 100% 100%;
+        display: flex;flex-wrap: wrap;align-content: space-around;
+        li{
+            color:#ffc166 ;.fs(24);width: 50%;.tc();.lh(55);
+            .iconfont{
+               display: inline-block;
+                .w(55);
+                .h(55);
+                .fs(26);
+                
+                border-radius: 50%;
+                border: 3px solid #f5f5f5;
+                .mr(4);
+            }
+        }
+    }
+}
+
+.proccess{
+    .mt(50);
+    .pro-wrap{
+        position: relative;.w(660);
+        .h(15);margin: 0 auto;
+        background: #F0F0F0;
+        border-radius: 8px;
+        .pro-front{
+            position: absolute;
+            background-color: #fb0502;
+            .w(0);
+            .h(15);
+            border-radius: 8px;
+            transition: width 0.5s ease-in-out;
+        }
+        .pro-block{
+            transition: left 0.5s ease-in-out;
+            position: absolute;
+            background-color: #fb0502;
+            .w(80);
+            .h(32);
+            .lh(32);
+            .tc();
+            color:#fff;
+            .left(0);
+          
+            .top(-50);
+            
+            &:after{
+                content: "";
+                display: block;
+                .triangle-b(12,#fb0502);
+                .top(35);
+                .hc();
+             }
+        }
+    }
+     .pro-info{
+        .w(685);
+        .bc(); //块级元素水平居中
+        .mt(30);
+        .flex_b();
+        color:#808080;
+        .fs(22);
+        em{color:#f00;}
+    }
+}
+.footerlink{
+    position: fixed;
+    .bottom(140);
+    left:0;right:0;
+    .tc();
+    a{
+        color:#808080;
+        .fs(22);
+    }
+}
+footer{
+    position: fixed;bottom: 0;
+    left: 0;right: 0;.flex_b();
+    .h(105);.pl(36);background: #f0f0f0;.pr(10);
+    .earnings{
+        color: #f90;.fs(32);color:#FA3432;
+        .tc();
+    }
+    .investment{
+        .fs(32);
+        color:#fff;
+        .w(517);
+        .h(82);
+        .lh(82);
+        background-color:#FA3432;
+        .tc();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
