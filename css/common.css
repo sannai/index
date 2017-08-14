@@ -1,0 +1,174 @@
+/*公用的CSS*/
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+img{vertical-align: top;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+capation,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before, q:after{content:'';}
+abbr,acronym{border:0;}
+
+.bc{margin-left:auto;margin-right:auto;}   /*块状元素集中对齐 block center*/
+.fl{float:left;display:inline;}  /* 可修复IE6中双倍边距bug */
+.fr{float:right;display:inline;}
+
+/*用伪元素清除浮动造成的塌陷*/
+.clearfix:after{
+	content:'';
+	display:block;  /*只有块状元素才可以清除浮动造成的塌陷*/
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+.clearfix{
+	zoom:1;   /*对IE6和IE7做的兼容*/
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+body{
+	-webkit-font-smoothing: antialiased;   /*当网页在webkit内核的浏览器下展示的时候，让字体更加圆润*/
+	color: #3C3C3C;
+	background-color: #f1f1f1;
+	height: 2000px;
+	overflow-x:hidden;    /*只有水平方向溢出隐藏*/
+}
+a{
+	color:#6c6c6c;
+	text-decoration: none;
+}
+a:hover{
+	color:#ff4400;
+}
+.cheng{
+	color:#f22e00 !important;
+}
+.tbcheng{
+	color:#f40 !important;
+}
+.anhong{
+	color:#c60000 !important;
+}
+.hui{
+	color:#9c9c9c !important;
+}
+
+/*声明自定义字体*/
+@font-face {
+	font-family: "iconfont";
+	src: url('font/iconfont.eot'); /* IE9*/
+	src: url('font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('font/iconfont.woff') format('woff'), /* chrome, firefox */
+	url('font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/*使用自定义字体*/
+.icon{
+	font-family:"iconfont";
+}
+
+
+.banxin{
+	width: 1190px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*用户导航start*/
+.user-nav{
+	height:35px;
+	line-height: 35px;
+	background-color: #f5f5f5;
+	border-bottom:1px solid #EEEEEE;
+}
+.user-nav-left li{
+	float: left;
+	display:inline;
+	margin-right: 9px;
+}
+.user-nav-left a{
+	margin-left: 6px;
+	margin-right: 2px;
+}
+
+.user-nav-right{
+	height: 35px;
+}
+.user-nav-right li{
+	float: left;
+	display:inline;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	padding-left: 7px;
+	padding-right: 5px;
+	position:relative;
+	z-index:3;
+}
+.user-nav-right li.on{
+	background-color: #fff;
+	border-color:#eee;
+	height: 36px;
+	border-bottom:1px solid #eee;
+}
+.user-nav-right li.pipe{
+	color:#dedee3;
+	padding-left: 10px;
+	padding-right: 2px;
+}
+.user-nav-right li a span{
+	margin-right: 4px;
+	margin-left: 0;
+}
+.user-nav-right li span{
+	margin-left: 6px;
+}
+.submenu{
+	position:absolute;
+	left:-1px;
+	top:36px;
+	border: 1px solid #eee;
+	border-top:0 none;
+	background-color: #fff;
+	padding:8px 0;
+	display:none;
+}
+.on .submenu{
+	display:block;
+}
+.submenu.sitemap{
+	right:-1px;
+	left:auto;
+}
+.submenu.cart{
+	width: 307px;
+	height: 62px;
+	line-height: 62px;
+	text-align: right;
+}
+.submenu.cart a{
+	display:inline-block;
+	background-color: #f40 !important;
+	color:white !important;
+	margin-right: 6px;
+}
+.submenu a{
+	display:block;
+	white-space:nowrap;   /*块状元素禁止里面的文字自动换行*/
+	padding:0 5px;
+	line-height: 28px;
+}
+.submenu a:hover{
+	background-color: #F5F5F5;
+	color:#6C6C6C;
+}
+.user-nav-right li strong{
+	color:#f40;
+	font-weight: bold;
+}
+/*用户导航end*/
